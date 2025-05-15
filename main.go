@@ -74,7 +74,8 @@ func main() {
 	// fmt.Printf("List of users who booked tickets: %v \n", usersBooked)
 	// // fmt.Printf("First value is slice: %v \n", usersBooked[0])
 
-	//The app can use multiple users at a time(we use loop: for loor)
+
+	//The app can use multiple users at a time(we use loop: for loor infinite loop)
 	var conferenceName string = "Go Conference"
 	const totalTickets int = 50 
 	var remainingTickets uint = 50 
@@ -128,6 +129,14 @@ func main() {
 			// u: is the value at that index, i.e. usersBooked[i]
 			fmt.Printf("%d. %s\n", i+1, u)
 		}
+
+		//stope the infinite loop if the remaining tickets are 0(if and break)
+		if remainingTickets == 0 {
+			fmt.Println("All the tickets are booked, get back the next year")
+			//stope the infinite loop
+			break
+		}
+		
 
 		//Print the first names of booked users
 		//we use for-each loop
